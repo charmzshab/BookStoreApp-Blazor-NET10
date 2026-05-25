@@ -110,7 +110,7 @@ namespace BookStoreApp.ApI.Controllers
         // POST: api/Authors
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Author>> PostAuthor(AuthorCreateDto authorCreateDto)
+        public async Task<ActionResult<AuthorReadOnlyDto>> PostAuthor(AuthorCreateDto authorCreateDto)
         {
             try { 
                 var author = _mapper.Map<Author>(authorCreateDto);
